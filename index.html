@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head class="head">
+        <title>Hangman</title>
+        <link rel="stylesheet" href="Hangman.css">
+        <h1>Hangman</h1>
+    </head>
+
+    <body>
+        <div id="mainbody">
+        <h2>Select Your Difficulty!</h2>
+        <div>
+            <select id="difficultyselect">
+                <option value="easy">Easy</option>
+                <option value="medium">Moderate</option>
+                <option value="hard">Hard</option>
+            </select>
+            <input type="submit" value="Start" onclick="getWord()">
+        </div>
+    </br>
+        <div>
+            <h4># of turns remaining:</h4>
+            <h2 id="turnsleft">10</h2>
+        </div>
+    </br>
+        <div>
+            <select id="guessselect">
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="c">C</option>
+                <option value="d">D</option>
+                <option value="e">E</option>
+                <option value="f">F</option>
+                <option value="g">G</option>
+                <option value="h">H</option>
+                <option value="i">I</option>
+                <option value="j">J</option>
+                <option value="k">K</option>
+                <option value="l">L</option>
+                <option value="m">M</option>
+                <option value="n">N</option>
+                <option value="o">O</option>
+                <option value="p">P</option>
+                <option value="q">Q</option>
+                <option value="r">R</option>
+                <option value="s">S</option>
+                <option value="t">T</option>
+                <option value="u">U</option>
+                <option value="v">V</option>
+                <option value="w">W</option>
+                <option value="x">X</option>
+                <option value="y">Y</option>
+                <option value="z">Z</option>
+            </select>
+            <input id="guessbtn" type="submit" value="Guess" onclick="processguess()" disabled>
+            </div>
+        <div>
+            <h2 id="letters">- - -</h2>
+        </div>
+    </br>
+        <div>
+            <canvas id="canvas" width="300" height="300" style="border:1px solid #000000;"></canvas>
+            <h4>Previously used letters:</h4>
+            <h2 id="usedletters"></h2>
+        </div>
+        </div>
+        <div id="newgamemodal" class="modal" hidden>
+            <div class="modal-content">
+                <p>Would you like to start a new game?</p>
+                <button type="button" onclick="location.reload()">YES</button>
+                <button type="button" onclick="alert('This window will now close'); window.close();">NO</button>
+            </div>
+        </div>
+    </body>
+    
+    <footer>
+        <small><i><a href="mailto:paveyns@mail.uc.edu">paveyns@mail.uc.edu</a></i></small>
+        <small><i>This page was created by Nicholas Pavey for IT3049C, Fall 2019</i></small>
+    </footer>
+</html>
+
+<script src="Hangman.js"></script>
